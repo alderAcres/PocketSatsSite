@@ -1,10 +1,11 @@
 import React from 'react'
 import 'App.css';
+import Homescreen from './screens/Homescreen.js';
 const App = () => {
   return (
-    <div>
-      <h1 className='wow'>Hello React</h1>
-    </div>
+    <>
+      <Homescreen/>
+    </>
   )
 }
 
