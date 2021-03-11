@@ -8,7 +8,8 @@ const Header = () => {
       <Container style={{paddingTop:'10px'}}>
       <div className='pocket' style={{marginBottom: '22px', marginRight: '12px'}}>
       </div>
-   <Navbar.Brand href="/" style={{fontSize:"2rem"}}>PocketSats</Navbar.Brand> 
+      <Image src={pic} alt='btc-logo' style={{height:'6vh', marginRight: '12px', backgroundColor: 'white', borderRadius: '100%'}}/>
+   <Navbar.Brand href="/" style={{fontSize:"30px"}}>PocketSats</Navbar.Brand> 
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav className="ml-auto textLight" id="nav-links">
