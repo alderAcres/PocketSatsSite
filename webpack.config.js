@@ -8,6 +8,9 @@ module.exports = {
     filename: "bundle.js",
     path: path.resolve("build"),
   },
+  stats: {
+   errorDetails: true, // --display-error-details
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
@@ -16,6 +19,18 @@ module.exports = {
   resolve: {
     modules: [__dirname, "src", "node_modules"],
     extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
+    fallback: {
+      "fs": false,
+      "tls": false,
+      "net": false,
+      "path": false,
+      "zlib": false,
+      "http": false,
+      "https": false,
+      "stream": false,
+      "crypto": false,
+      "crypto-browserify": require.resolve('crypto-browserify'), //if you want to use this module also don't forget npm i crypto-browserify 
+    } 
   },
   module: {
     rules: [
