@@ -6,16 +6,11 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "bundle.js",
-    path: path.resolve("build"),
+    path: path.resolve(__dirname, "build"),
   },
   stats: {
    errorDetails: true, // --display-error-details
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      template: "./src/index.html",
-    }),
-  ],
   resolve: {
     modules: [__dirname, "src", "node_modules"],
     extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
@@ -40,10 +35,6 @@ module.exports = {
         loader: require.resolve("babel-loader"),
       },
       {
-        test: /\.html$/,
-        use: ['html-loader']
-    },
-      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
@@ -53,4 +44,11 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    publicPath: '/build',
+    proxy: {
+      '/': 'http://localhost:3000/'
+    },
+    contentBase: '/public'
+},
 };
