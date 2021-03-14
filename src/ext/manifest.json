@@ -1,0 +1,29 @@
+{
+  "name": "PocketSats",
+  "description": "Allowing user to convert USD to SATS",
+  "version": "0.1.0",
+  "manifest_version": 2,
+  "icons": {
+    "16": "./soccer.png",
+    "32": "./soccer.png",
+    "48": "./soccer.png",
+    "128": "./soccer.png"
+  },
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "options_page": "./options.html",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "tabs",
+    "https://www.google.com/*",
+    "*://*.amazon.com/",
+    "*://www.amazon.com/",
+    "https://www.amazon.com/*",
+    "http://*/*",
+    "https://*/*",
+    "storage"
+  ]
+}

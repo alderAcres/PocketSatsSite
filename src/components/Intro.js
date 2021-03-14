@@ -10,8 +10,8 @@ const Intro = () => {
     </p>
     <p>
       <div id='button-container'>
-      <Button style={{height:'10vh', width:'20vw'}} className='btn btn-primary btn-md' variant="info">Learn more</Button>
-      <Button style={{height:'10vh', width:'20vw'}} className='btn btn-primary btn-md' variant="primary">Download Extension</Button>
+      <Button style={{height:'10vh', width:'20vw'}} className='btn-primary btn-md' variant="primary">Learn more</Button>
+      <Button style={{height:'10vh', width:'20vw'}} className='btn-dark btn-md' variant="dark">Download Extension</Button>
       </div>
     </p>
   </Jumbotron>

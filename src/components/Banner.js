@@ -41,9 +41,12 @@ class Banner extends Component {
   constructor(props){
     super(props);
     this.state = {
-      coin: 'default',
-      currentPrice: 55555,
-      satsPerBitcoin: 12345677
+      currentPrice: '',
+      satsPerBitcoin: '',
+      priceChangePercentage: '',
+      low_24: '',
+      high_24: '',
+      circulatingSupply: ''
     }
     this.getData = this.getData.bind(this);
   }
@@ -51,7 +54,9 @@ class Banner extends Component {
   getData =  async () => {
         axios.get("/api/data")
         .then(response => response.data)
-        .then(bitData => this.setState({...bitData}))
+        .then(bitData => {
+          this.setState({...bitData})}
+          )
         .catch(err => console.log(err))
         //setState here by invoking setProducts, what you declared on line 12 to be the function that changes state
       //as a second argument to useEffect, we put an array of depencies. or certain things 
@@ -64,8 +69,14 @@ class Banner extends Component {
 
   render() {
     return(
-      <Alert style={{height:'35px', padding:'20px 0 0 3px', display: 'flex', flexDirection:'row', justifyContent:'space-around', alignItems:'center', margin:' 73px 0 100px 0'}} variant="info">
-     <p>{this.state.coin}</p><p>{this.state.currentPrice}</p><p>{this.state.satsPerBitcoin}</p>   </Alert>
+      <Alert style={{height:'45px', textAlign: 'center', marginTop: '10vh', fontSize: '14px', fontWeight: 'bold', backgroundColor: 'white', borderTop: 'none', borderBottom: '1px solid #4d4d4e', color: '#f2a900', padding:'20px 0 0 3px', display: 'flex', flexDirection:'row', justifyContent:'space-around', alignItems:'center'}} variant="info">
+        <div style={{display: 'flex'}}><p style={{color:'#4d4d4e', marginRight: '.4vw'}}>BTC Current Price:</p><p>{this.state.currentPrice}</p></div>
+        <div style={{display: 'flex'}}><p style={{color:'#4d4d4e', marginRight: '.4vw'}}>24hr Low:</p><p>{this.state.low_24}</p></div>
+        <div style={{display: 'flex'}}><p style={{color:'#4d4d4e', marginRight: '.4vw'}}>24hr High:</p><p> {this.state.high_24}</p></div>
+        <div style={{display: 'flex'}}><p style={{color:'#4d4d4e', marginRight: '.4vw'}}>Sats Per Bitcoin:</p><p> {this.state.satsPerBitcoin}</p></div>
+        <div style={{display: 'flex'}}><p style={{color:'#4d4d4e', marginRight: '.4vw'}}>24-Hour % Change:</p><p> {this.state.priceChangePercentage}</p></div>
+        <div style={{display: 'flex'}}><p style={{color:'#4d4d4e', marginRight: '.4vw'}}>Circulating Supply:</p><p> {this.state.circulatingSupply}/ 21,000,000</p></div>
+     </Alert>
   
     )
   }
