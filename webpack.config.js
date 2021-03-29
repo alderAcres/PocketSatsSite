@@ -12,7 +12,7 @@ module.exports = {
    errorDetails: true, // --display-error-details
   },
   resolve: {
-    modules: [__dirname, "src", "node_modules"],
+    modules: [__dirname, "src", "node_modules", "ext"],
     extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
     fallback: {
       "fs": false,

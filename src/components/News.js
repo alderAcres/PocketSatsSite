@@ -17,11 +17,27 @@ const News = (props) => {
 const newsArr = [];
 
 news.map((newsStory, i) => {
+  if(newsStory.urlToImage){
+    if(i % 3 === 0) {
+      newsArr.push(
+        <Col>
+        <Card key = {i} className= 'col' style={{border: '1px solid black', padding: '1rem', width: '33rem', height: 'auto' }}>
+        <Card.Title style={{fontSize: '20px', padding: '6px', fontWeight:'bold', textAlign:'center'}}>{newsStory.title}</Card.Title>
+        <a href={newsStory.url} target="_blank"><Card.Img variant="top" src={newsStory.urlToImage} /></a>
+        <Card.Body>
+          <Card.Text>
+            {newsStory.description}
+          </Card.Text>
+        </Card.Body>
+      </Card>
+      </Col>
+      )
+    } else 
 newsArr.push(
   <Col>
-  <Card className= 'col' style={{ width: '20rem' }}>
+  <Card key = {i} className= 'col' style={{border: '1px solid black', padding: '1rem',width: '20rem' }}>
   <Card.Title style={{fontSize: '20px', padding: '6px', fontWeight:'bold', textAlign:'center'}}>{newsStory.title}</Card.Title>
-  <Card.Img variant="top" src={newsStory.urlToImage} />
+  <a href={newsStory.url} target="_blank"><Card.Img variant="top" src={newsStory.urlToImage} /></a>
   <Card.Body>
     <Card.Text>
       {newsStory.description}
@@ -30,6 +46,7 @@ newsArr.push(
 </Card>
 </Col>
 )
+  }
 })
 
   return (
