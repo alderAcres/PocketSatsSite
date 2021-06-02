@@ -28,8 +28,7 @@ app.get('/api/news', controller.getNews, (req, res) => {
   res.status(200).send(newsData);
 })
 
-app.get('/api/data', controller.getData, async (req, res) => {
-  console.log('HITTIN API')
+app.get('/api/data', controller.getData, (req, res) => {
 
   const data = res.locals.data;
   let bitcoinInfo = data.data[0];
@@ -44,11 +43,13 @@ app.get('/api/data', controller.getData, async (req, res) => {
   else res.sendStatus(404);
 })
 
+
 app.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, '../index.html'));
 });
+
 //catch all route for rputes thar are unknown
-// app.use('/*',(req,res) => res.sendStatus(404));
+app.use('/*',(req,res) => res.sendStatus(404));
 
 //catch route for errors
 app.use((err, req, res, next) => {
@@ -57,8 +58,7 @@ app.use((err, req, res, next) => {
     status: 400,
     message: { err: 'An error occurred' }, 
   };
-  console.log(err)
-  //Object.create(errorObj, error ?? defaultErr);
+
   const errorObj = Object.assign(defaultErr, err);
   console.log('errorObj log:', errorObj.log)
   
