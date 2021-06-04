@@ -16,12 +16,13 @@ const HowToUse = () => {
   <div style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>
 <h1 style= {{textAlign: 'center', marginBottom: '40px', color: 'black', fontSize: '34px'}}>How to Use the PocketSats Extension</h1>
 </div>
-    <Carousel style={{border: '1px solid black'}} activeIndex={index} onSelect={handleSelect}>
+    <Carousel activeIndex={index} onSelect={handleSelect}>
     <Carousel.Item >
       <img
         className="d-block w-100"
         src={pic1}
         alt="First slide"
+        style = {{width:'20vw', height: 'auto'}}
       />
       <Carousel.Caption>
         <h1>Step 1: Download Extension</h1>
@@ -33,6 +34,7 @@ const HowToUse = () => {
         className="d-block w-100"
         src={pic2}
         alt="Second slide"
+        style = {{width:'20vw', height: 'auto'}}
       />
 
       <Carousel.Caption>
@@ -54,6 +56,7 @@ const HowToUse = () => {
         className="d-block w-100"
         src={pic3}
         alt="Third slide"
+        style = {{width:'20vw', height: 'auto'}}
       />
 
     </Carousel.Item>

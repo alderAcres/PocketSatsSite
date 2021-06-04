@@ -16,7 +16,6 @@ controller.getNews = async (req, res, next) => {
   fetch(url)
   .then(data => data.json())
   .then(data => {
-    console.log('newsData', data.articles)
     res.locals.news = data.articles.slice(0, 50)
     next();
   })
@@ -29,14 +28,14 @@ controller.getNews = async (req, res, next) => {
 
 }
 controller.getData = async (req, res, next) => {
-  console.log('getting data')
   let data = await CoinGeckoClient.ping();
   if(data.code === 200) {
   let coinData = await CoinGeckoClient.coins.all();
   res.locals.data = coinData;
   next();
   } else {
-   console.log('ERROR WITH RETRIEVING DATA')
+   throw Error;
+   console.log('Error in controller file, getData function')
   }
 }
 

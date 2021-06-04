@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from '../components/Header.js';
+import DataBanner from '../components/DataBanner.js';
 import Intro from '../components/Intro.js';
 import { Container } from 'react-bootstrap';
-import Banner from '../components/Banner.js';
 import News from '../components/News.js';
 import Footer from '../components/Footer.js';
 import HowToUse from '../components/HowToUse.js';
 const Homescreen = () => {
-  
+    const styles = {
+        container : {
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent:'space-between'
+        }
+    }
     return ( 
-    <>
+    <div>
         <Header/>
-        <Banner/>
-      <Container id="homeContain" style={{marginTop:'10vh'}}>
+        <DataBanner/>
        <Intro/>
-      </Container>
       <Container id="homeContain">
       <div id="jumpToHowToUse">
       <HowToUse/> 
@@ -29,7 +33,7 @@ const Homescreen = () => {
       <Container>
           <Footer/>
       </Container>
-     </>
+     </div>
      );
 }
  

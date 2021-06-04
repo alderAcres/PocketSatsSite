@@ -25,6 +25,9 @@ justify-content: space-around;
 margin-top: 5vh;
 }
 #homeContain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 15vh !important;
   color: #000000;
 }
@@ -53,7 +56,7 @@ margin-top: 5vh;
   outline: none;
 }
 .news {
-  margin: 150px 0 160px 0;
+  margin: 150px 0 40px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -62,8 +65,8 @@ margin-top: 5vh;
 
 #flex-container {
     margin-top: 3vh; 
-    height: 54rem; 
-    width: 68rem;
+    height: 50vh; 
+    width: 80vw;
     overflow-y: scroll; 
     padding: 10px; 
     border: 5px solid #4d4d4e; 
@@ -75,12 +78,6 @@ margin-top: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-/* Responsive layout - makes a one column layout instead of a two-column layout */
-@media (max-width: 800px) {
-  .col {
-    display: block;
-  }
 }
 
 #caro h1{

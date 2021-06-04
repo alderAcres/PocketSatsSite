@@ -48,7 +48,7 @@ app.get('/', (req, res, next) => {
   res.sendFile(path.join(__dirname, '../index.html'));
 });
 
-//catch all route for rputes thar are unknown
+//catch all route for routes thar are unknown
 app.use('/*',(req,res) => res.sendStatus(404));
 
 //catch route for errors

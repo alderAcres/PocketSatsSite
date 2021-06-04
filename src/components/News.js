@@ -7,7 +7,7 @@ const News = (props) => {
   useEffect(() => {
     const fetchNews = async () => {
       const newsData = await axios.get('/api/news/');
-
+      console.log(newsData)
       setNews(newsData.data);
     }
     fetchNews();
@@ -50,16 +50,14 @@ newsArr.push(
 })
 
   return (
-    <>
-    <Container className = 'news'>
+    <div className = 'news'>
     <h1 style={{textAlign:'center'}}>Latest Crypto News</h1>
     <div id='flex-container'>
     <Row>
        {newsArr}
     </Row>
     </div>
-    </Container>
-    </>
+    </div>
   )
 }
 
