@@ -44,11 +44,12 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: path.resolve(__dirname, "./index.html"),
+    })
+  ],
   devServer: {
-    publicPath: '/build',
-    proxy: {
-      '/': 'http://localhost:3000/'
-    },
-    contentBase: '/public'
+    contentBase: '/build'
 },
 };
