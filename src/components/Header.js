@@ -31,7 +31,6 @@ const Header = () => {
     <Navbar.Collapse id="basic-navbar-nav">
       <Nav style={{marginLeft: '6rem'}} className="ml-auto textLight" id="nav-links">
         <Nav.Link style={styles.links} href="#jumpToHowToUse">How To Use</Nav.Link>
-        <Nav.Link style={styles.links} href="#jumpToNews">Crypto News</Nav.Link>
         <Button className="btn btn-primary navbar-btn" style={{color: 'black', fontSize: '1.3vw'}}>Download</Button>
       </Nav>
     </Navbar.Collapse>

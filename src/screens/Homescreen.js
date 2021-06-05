@@ -4,7 +4,6 @@ import DataBanner from '../components/DataBanner.js';
 import Intro from '../components/Intro.js';
 import Header from '../components/Header.js';
 import { Container } from 'react-bootstrap';
-import News from '../components/News.js';
 import Footer from '../components/Footer.js';
 import HowToUse from '../components/HowToUse.js';
 const Homescreen = () => {
@@ -22,11 +21,6 @@ const Homescreen = () => {
       <Container id="homeContain">
       <div id="jumpToHowToUse">
       <HowToUse/> 
-      </div>
-      </Container>
-      <Container id="homeContain" style={{marginTop: '-15vh', marginBottom: '5vh'}}>
-         <div id="jumpToNews">
-         <News/> 
       </div>
       </Container>
       <Container>
