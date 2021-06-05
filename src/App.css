@@ -2,22 +2,6 @@ html {
   scroll-behavior: smooth;
 }
 
-#jumpToNews::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -55px; 
-  height: 45px; 
-  visibility: hidden; 
-  pointer-events: none;
-}
-#jumpToHowToUse::before { 
-  display: block; 
-  content: " "; 
-  margin-top: -125px; 
-  height: 155px; 
-  visibility: hidden; 
-  pointer-events: none;
-}
 
 #button-container {
 display: flex;
@@ -28,7 +12,6 @@ margin-top: 5vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 15vh !important;
   color: #000000;
 }
 
@@ -56,7 +39,7 @@ margin-top: 5vh;
   outline: none;
 }
 .news {
-  margin: 150px 0 40px 0;
+  margin: 30vh 15vw 10vh 15vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,10 +48,9 @@ margin-top: 5vh;
 
 #flex-container {
     margin-top: 3vh; 
-    height: 50vh; 
-    width: 80vw;
+    height: 60vh; 
+    width: 73vw;
     overflow-y: scroll; 
-    padding: 10px; 
     border: 5px solid #4d4d4e; 
     display: flex;
     justify-content: space-between;
@@ -80,13 +62,16 @@ margin-top: 5vh;
   align-items: center;
 }
 
+#caro {
+  margin: 0 6vw;
+}
 #caro h1{
   color: white;
-  font-size: 3.1rem;
+  font-size: 4vw;
 }
 
 #caro p{
-font-size: 1.9rem;
+font-size: 2vw;
 }
 
 #pocket-link {

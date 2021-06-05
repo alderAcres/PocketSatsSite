@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import Header from '../components/Header.js';
 import DataBanner from '../components/DataBanner.js';
 import Intro from '../components/Intro.js';
+import Header from '../components/Header.js';
 import { Container } from 'react-bootstrap';
 import News from '../components/News.js';
 import Footer from '../components/Footer.js';
@@ -18,7 +18,6 @@ const Homescreen = () => {
     return ( 
     <div>
         <Header/>
-        <DataBanner/>
        <Intro/>
       <Container id="homeContain">
       <div id="jumpToHowToUse">

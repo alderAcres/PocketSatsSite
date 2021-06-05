@@ -18,40 +18,25 @@ const newsArr = [];
 
 news.map((newsStory, i) => {
   if(newsStory.urlToImage){
-    if(i % 3 === 0) {
       newsArr.push(
         <Col>
-        <Card key = {i} className= 'col' style={{border: '1px solid black', padding: '1rem', width: '33rem', height: 'auto' }}>
-        <Card.Title style={{fontSize: '20px', padding: '6px', fontWeight:'bold', textAlign:'center'}}>{newsStory.title}</Card.Title>
+        <Card key = {i} className= 'col' style={{border: '1px solid black' }}>
+        <Card.Title style={{fontSize: '2vw', padding: '.3rem', fontWeight:'bold', textAlign:'center'}}>{newsStory.title}</Card.Title>
         <a href={newsStory.url} target="_blank"><Card.Img variant="top" src={newsStory.urlToImage} /></a>
         <Card.Body>
-          <Card.Text>
+          <Card.Text style={{fontSize:'1.6vw'}}>
             {newsStory.description}
           </Card.Text>
         </Card.Body>
       </Card>
       </Col>
       )
-    } else 
-newsArr.push(
-  <Col>
-  <Card key = {i} className= 'col' style={{border: '1px solid black', padding: '1rem',width: '20rem' }}>
-  <Card.Title style={{fontSize: '20px', padding: '6px', fontWeight:'bold', textAlign:'center'}}>{newsStory.title}</Card.Title>
-  <a href={newsStory.url} target="_blank"><Card.Img variant="top" src={newsStory.urlToImage} /></a>
-  <Card.Body>
-    <Card.Text>
-      {newsStory.description}
-    </Card.Text>
-  </Card.Body>
-</Card>
-</Col>
-)
   }
 })
 
   return (
     <div className = 'news'>
-    <h1 style={{textAlign:'center'}}>Latest Crypto News</h1>
+    <h1 style={{textAlign:'center', fontSize: '3vw'}}>Daily Crypto News</h1>
     <div id='flex-container'>
     <Row>
        {newsArr}

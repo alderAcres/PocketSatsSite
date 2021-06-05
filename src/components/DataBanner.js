@@ -11,19 +11,19 @@ let styles = {
   pBanner : {
     color:'black', 
     marginLeft: '.2vw',
-    marginRight: '.2vw'
+    marginRight: '.2vw',
+    lineHeight: '88%'
   },
   divBanner : {
-    height: '6.6vh',
+    height: '4.99vh',
     display: 'flex',
     flexDirection:'row', 
     justifyContent:'center',
+    fontSize: '1.66vw', 
     alignItems : 'center',
-    fontSize: '1.69vw', 
-    textAlign: 'center', 
-    alignItems: 'center',
-    backgroundColor: '#f2a900',
-    paddingTop: '2vh'
+    textAlign: 'center',
+    paddingTop: '1.1rem',
+    backgroundColor: '#f2a900'
   },
   dataBanner : {
     marginRight: '1vw',
@@ -69,8 +69,8 @@ class DataBanner extends Component {
         <p style= {styles.pBanner}>BTC Price:</p><p style={styles.dataBanner}>{this.state.currentPrice}</p>
         <p style= {styles.pBanner}>24hr Low:</p><p style={styles.dataBanner}>{this.state.low_24}</p>
         <p style= {styles.pBanner}>24hr High:</p><p style={styles.dataBanner}> {this.state.high_24}</p>
-        <p style= {styles.pBanner}>24-Hour%:</p><p style = {{color : this.state.priceChangePercentage >= 0 ? '#52A252' : '#E41A1A'}}> {this.state.priceChangePercentage}%</p>
-        <p style= {styles.pBanner}>Circ. Supply:</p><p style={styles.dataBanner}> {this.state.circulatingSupply}/ 21,000,000</p>
+        <p style= {styles.pBanner}>24-Hour%:</p><p style = {{color : this.state.priceChangePercentage >= 0 ? '#52A252' : '#E41A1A', alignItems : 'center'}}> {this.state.priceChangePercentage}%</p>
+        <p style= {styles.pBanner}>Circ. Supply:</p><p style={styles.dataBanner}> {this.state.circulatingSupply}</p>
       </div>
     )
   }

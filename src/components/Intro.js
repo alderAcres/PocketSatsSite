@@ -18,15 +18,14 @@ const Intro = () => {
     },
     jumbo : {
       textAlign: 'center',
-      marginTop: '10vh'
+      margin: '30vh 15vw 15vh 15vw'
     }
   }
   return (
     <Jumbotron id='jumbo' style={styles.jumbo}>
-    <h1 style= {styles.header} >Convert USD to Satoshis (Sats) on the fly with PocketSats!</h1>
+    <h1 style= {styles.header} >Convert prices from USD to Sats on the fly with PocketSats!</h1>
     <p style= {styles.p}>
-      PocketSats is an extension that allows you to be on any website 
-      and have the ability to convert the price of an item in USD to Sats, the smallest unit of Bitcoin.
+      PocketSats is a Chrome extension that gives you the ability to convert the price of any item in USD to Satoshis (Sats), the smallest unit of Bitcoin.
     </p>
     <p>
       <div id='button-container'>

@@ -15,7 +15,7 @@ const Header = () => {
       alignSelf: 'center', 
       color:'white', 
       fontSize: '1.8vw',
-      marginRight: '5px'
+      marginRight: '1.2vw'
   },
     brand : {
       fontSize:'3vw'
@@ -23,8 +23,8 @@ const Header = () => {
   }
 
   return (
-    <header style={{ marginBottom: '15vh'}} id='header'>
-    <Navbar expand='md' className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" variant="white" expand="lg" collapseOnSelect id ='navbar'>
+    <header style={{ marginBottom: '15vh'}} >
+    <Navbar className="navbar navbar-expand-md navbar-dark bg-dark fixed-top" variant="white" expand="lg" collapseOnSelect id ='navbar'>
     <a href="/"><img src={pic} alt='btc-logo' style = {styles.logo}/></a>
    <Navbar.Brand href="/" style={styles.brand}>PocketSats</Navbar.Brand> 
     <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -32,11 +32,6 @@ const Header = () => {
       <Nav style={{marginLeft: '6rem'}} className="ml-auto textLight" id="nav-links">
         <Nav.Link style={styles.links} href="#jumpToHowToUse">How To Use</Nav.Link>
         <Nav.Link style={styles.links} href="#jumpToNews">Crypto News</Nav.Link>
-        <NavDropdown style={styles.links} className= "text-black" title="More" id="basic-nav-dropdown">
-          <NavDropdown.Item style={{color:'black'}} href="/faq">FAQ</NavDropdown.Item>
-          <NavDropdown.Divider/>
-          <NavDropdown.Item style={{color:'black'}} href="/contact">Contact</NavDropdown.Item>
-        </NavDropdown>
         <Button className="btn btn-primary navbar-btn" style={{color: 'black', fontSize: '1.3vw'}}>Download</Button>
       </Nav>
     </Navbar.Collapse>
